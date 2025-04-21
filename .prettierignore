@@ -1,0 +1,19 @@
+# Modules
+node_modules
+
+# Packages
+pnpm-lock.yaml
+package.json
+
+# Build
+.next
+.vercel
+out
+
+# Images
+*.png
+*.jpg
+
+# Contentlayer
+.contentlayer
+*.mdx
