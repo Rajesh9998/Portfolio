@@ -20,14 +20,13 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+ const { slug } = await params;
  const posts = await getResearchPosts();
- const post = posts.find((post) => post.slug === params.slug);
+ const post = posts.find((post) => post.slug === slug);
 
  if (!post) {
   return {};
@@ -54,8 +53,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ResearchPost({ params }: Props) {
+ const { slug } = await params;
  const posts = await getResearchPosts();
- const post = posts.find((post) => post.slug === params.slug);
+ const post = posts.find((post) => post.slug === slug);
 
  if (!post) {
   notFound();
