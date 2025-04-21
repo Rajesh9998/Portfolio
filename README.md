@@ -1,15 +1,5 @@
-![Portfolio header](https://github.com/RAJESH-YARRA/Rajesh9998.github.io/assets/49127376/59642eac-4ac5-4d03-931c-2513d46655d3)
 
-<div align="center">
-  <a aria-label="GitHub License" href="https://github.com/Rajesh9998/Rajesh9998.github.io/blob/master/license.md">
-    <img src="https://img.shields.io/github/license/Rajesh9998/Rajesh9998.github.io?color=%2334D058&logo=github&style=flat-square&label=License">
-  </a>
-  <a aria-label="LinkedIn" href="https://www.linkedin.com/in/rajesh-yarra/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white">
-  </a>
-</div>
 
----
 
 <!-- prettier-ignore-start -->
 > [!IMPORTANT]
@@ -18,7 +8,7 @@
 
 ## 📸 Screenshots
 
-![Home page](https://github.com/user-attachments/assets/ee4cc06b-432d-4e1a-8bd2-59a60d6ae31e)
+![Home page](https://github.com/Rajesh9998/Portfolio/blob/master/portfolio.png)
 
 ## 🖥️ Hosting
 
