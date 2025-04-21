@@ -1,9 +1,8 @@
 {
-  "name": "rajesh-yarra-portfolio",
+  "name": "rajesh_yarra-portfolio",
   "description": "My portfolio built on Next.js",
   "version": "6.1.0",
   "author": "Rajesh Yarra",
-  "homepage": "https://igorkowalczyk.dev",
   "license": "MIT",
   "private": true,
   "scripts": {
