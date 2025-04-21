@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, PageProps } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXContent } from "@/components/MDXContent";
@@ -19,11 +19,11 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-interface Props {
- params: {
-  slug: string;
- };
-}
+type Props = PageProps<{
+  params: {
+    slug: string;
+  };
+}>;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
  const posts = await getResearchPosts();
