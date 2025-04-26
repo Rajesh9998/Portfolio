@@ -16,16 +16,16 @@ export const nav = {
    title: "Blog",
   },
   {
+   href: "/resume/",
+   title: "Resume",
+  },
+  {
    href: "/research/",
    title: "Research",
   },
  ],
  // Only for mobile navigation, will be merged with the main navigation
  mobile: [
-  {
-   href: "/research/",
-   title: "Research",
-  },
   {
    href: "https://www.linkedin.com/in/rajesh-yarra-850b40254",
    title: "LinkedIn",
