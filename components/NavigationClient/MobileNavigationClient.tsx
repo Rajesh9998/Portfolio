@@ -24,11 +24,25 @@ export default function MobileNavigationClient() {
           <DrawerDescription className="sr-only">All navigation links. Press tab to cycle through links.</DrawerDescription>
         </DrawerHeader>
         <div className="mt-3 flex flex-col gap-2">
-          {menuItems.map((item) => (
-            <Button variant="secondary" key={item.href} asChild className="w-full" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Link href={item.href}>{item.title}</Link>
-            </Button>
-          ))}
+          {menuItems.map((item) => {
+            const isTalkToMe = item.title === "Talk to me";
+            return (
+              <Button 
+                variant={isTalkToMe ? "primary" : "secondary"} 
+                key={item.href} 
+                asChild 
+                className={cn("w-full", isTalkToMe && "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800")}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                <Link href={item.href} target={item.target}>
+                  <span className="flex items-center gap-2">
+                    {isTalkToMe && <Icons.Bot className="size-4" />}
+                    {item.title}
+                  </span>
+                </Link>
+              </Button>
+            );
+          })}
         </div>
       </DrawerContent>
     </Drawer>

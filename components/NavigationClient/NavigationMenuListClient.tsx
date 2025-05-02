@@ -10,11 +10,15 @@ import { cn } from "@/lib/utils";
 function NavigationItem({ path, text }: { path: string; text: string }) {
   const pathname = usePathname() || "/";
   const isActive = pathname.split("/")[1].trim() === path.split("/")[1].trim();
+  const isTalkToMe = text === "Talk to me";
 
   return (
     <NavigationMenuItem>
       <NavigationMenuLink asChild active={isActive} className={navigationMenuTriggerStyle()}>
-        <Link href={path}>{text}</Link>
+        <Link href={path} className={isTalkToMe ? "flex items-center gap-1 font-medium text-blue-600 dark:text-blue-400" : ""}>
+          {isTalkToMe && <Icons.Bot className="size-4" />}
+          {text}
+        </Link>
       </NavigationMenuLink>
     </NavigationMenuItem>
   );
@@ -71,9 +75,11 @@ function MorePopover() {
 export default function NavigationMenuListClient() {
   return (
     <NavigationMenuList className="hidden lg:inline-flex">
-      {nav.main.map((item) => (
-        <NavigationItem path={item.href} text={item.title} key={`nav-left-${item.href}`} />
-      ))}
+      {nav.main
+        .filter(item => item.title !== "Talk to me")
+        .map((item) => (
+          <NavigationItem path={item.href} text={item.title} key={`nav-left-${item.href}`} />
+        ))}
       <MorePopover />
     </NavigationMenuList>
   );

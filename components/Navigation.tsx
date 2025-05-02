@@ -40,12 +40,14 @@ export function Navigation() {
         <div className="flex gap-2">
           <Link
             target="_blank"
-            href="https://github.com/Rajesh9998"
-            className={cn(buttonVariants({ variant: "secondary" }), "size-10 hidden 2xl:flex")}
+            href="https://rajeshs-ai-assistant.vercel.app/"
+            className={cn(buttonVariants({ variant: "primary" }), "hidden sm:flex items-center gap-1")}
           >
-            <Icons.Github className="size-4" />
-            <span className="sr-only">GitHub</span>
+            <Icons.Bot className="size-4" />
+            <span>Talk to me</span>
           </Link>
+          
+          
 
           <ThemeToggle />
         </div>

@@ -4,6 +4,7 @@ description: "A novel approach that leverages the capabilities of multiple LLMs 
 publishedAt: "2025-04-15"
 status: "published"
 author: "Rajesh Yarra"
+publicationUrl: "https://arxiv.org/abs/2504.18423"
 ---
 
 I'm pleased to share insights from our recent research paper, **"LLMpatronous: Harnessing the Power of LLMs For Vulnerability Detection."** This work delves into the capabilities and challenges of using Large Language Models (LLMs) to identify software vulnerabilities, proposing a novel approach to overcome inherent limitations.

@@ -1,5 +1,6 @@
 import Link from "@/components/ui/Link";
 import { formatDate } from "@/lib/utils";
+import { Icons } from "@/components/ui/Icons";
 
 type ResearchPost = {
  slug: string;
@@ -8,6 +9,7 @@ type ResearchPost = {
   description: string;
   publishedAt: string;
   status: string;
+  publicationUrl?: string;
  };
 };
 
@@ -25,6 +27,14 @@ export default function ResearchList({ posts }: { posts: ResearchPost[] }) {
       <div className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
        <time dateTime={post.metadata.publishedAt}>{formatDate(post.metadata.publishedAt)}</time>
        {post.metadata.status === "draft" && <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-xs dark:bg-neutral-800">Draft</span>}
+       {post.metadata.publicationUrl && (
+        <a href={post.metadata.publicationUrl} target="_blank" rel="noopener noreferrer" 
+           className="ml-2 flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300" 
+           onClick={(e) => e.stopPropagation()}>
+          <Icons.ExternalLink className="mr-1 size-3" />
+          <span>Publication Link</span>
+        </a>
+       )}
       </div>
      </Link>
     </article>

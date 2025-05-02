@@ -86,6 +86,7 @@ export type NavPopoverItem = {
  description: string;
  icon: keyof typeof Icons;
  iconStyles?: string;
+ target?: string;
 };
 
 export type NavPopover = {

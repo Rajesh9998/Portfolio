@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXContent } from "@/components/MDXContent";
 import { Header1 } from "@/components/ui/Headers";
+import { Icons } from "@/components/ui/Icons";
 import Link from "@/components/ui/Link";
 import { meta } from "@/config/metadata";
 import { getResearchPosts } from "@/lib/researchUtils";
@@ -105,6 +106,17 @@ export default async function ResearchPost({ params }: Props) {
         {wordCount} words • {readingTime.text}
        </p>
       </div>
+      {post.metadata.publicationUrl && (
+        <a 
+          href={post.metadata.publicationUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="mt-3 inline-flex items-center rounded-md px-3 py-1.5 text-sm font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-300 dark:hover:bg-blue-900/40 transition-colors"
+        >
+          <Icons.ExternalLink className="mr-1.5 size-4" />
+          <span>View Publication on arXiv</span>
+        </a>
+      )}
      </header>
      <MDXContent>{post.content}</MDXContent>
     </div>

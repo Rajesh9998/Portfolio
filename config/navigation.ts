@@ -23,6 +23,11 @@ export const nav = {
    href: "/research/",
    title: "Research",
   },
+  {
+   href: "https://rajeshs-ai-assistant.vercel.app/",
+   title: "Talk to me",
+   target: "_blank",
+  },
  ],
  // Only for mobile navigation, will be merged with the main navigation
  mobile: [

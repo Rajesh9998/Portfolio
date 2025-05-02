@@ -40,6 +40,7 @@ export const getResearchPosts = cache(async () => {
      publishedAt: metadata.publishedAt,
      status: metadata.status || "published",
      author: metadata.author || "Rajesh Yarra",
+     publicationUrl: metadata.publicationUrl,
     },
     content,
     wordCount,

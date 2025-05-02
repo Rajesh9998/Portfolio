@@ -50,6 +50,11 @@ export const footer = {
      title: "Contact",
      href: "/contact",
     },
+    {
+     title: "Talk to me",
+     href: "https://rajeshs-ai-assistant.vercel.app/",
+     target: "_blank",
+    },
    ],
   },
  ],
